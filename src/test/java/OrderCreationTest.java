@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.List;
-
+import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static steps.OrderSteps.createOrder;
 
@@ -32,7 +32,7 @@ public class OrderCreationTest extends BaseApiTest{
         OrderCreationModel order = new OrderCreationModel(color);
         createOrder(order)
                 .then()
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .body("track", instanceOf(Integer.class));
     }
 }

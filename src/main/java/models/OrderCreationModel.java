@@ -1,7 +1,11 @@
 package models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class OrderCreationModel {
     private String firstName = "Vfafa";
     private String lastName = "asdas";
@@ -15,77 +19,5 @@ public class OrderCreationModel {
 
     public OrderCreationModel(List<String> color) {
         this.color = color;
-    }
-
-    public List<String> getColor() {
-        return color;
-    }
-
-    public void setColor(List<String> color) {
-        this.color = color;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddres() {
-        return addres;
-    }
-
-    public void setAddres(String addres) {
-        this.addres = addres;
-    }
-
-    public String getMetroStation() {
-        return metroStation;
-    }
-
-    public void setMetroStation(String metroStation) {
-        this.metroStation = metroStation;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getRentTime() {
-        return rentTime;
-    }
-
-    public void setRentTime(String rentTime) {
-        this.rentTime = rentTime;
-    }
-
-    public String getDeliveryDate() {
-        return deliveryDate;
-    }
-
-    public void setDeliveryDate(String deliveryDate) {
-        this.deliveryDate = deliveryDate;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 }

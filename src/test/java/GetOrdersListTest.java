@@ -2,7 +2,7 @@ import jdk.jfr.Description;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
-
+import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static steps.OrderSteps.getOrderList;
 
@@ -13,7 +13,7 @@ public class GetOrdersListTest extends BaseApiTest{
     public void getOrdersListTest(){
         getOrderList()
                 .then()
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .body("orders", notNullValue());
     }
 }
